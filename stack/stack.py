@@ -30,3 +30,15 @@ class Stack:
         else:
             return self.stack.pop()
 
+class LLStack:
+    def __init__(self):
+        self.size = 0
+        self.stack = LinkedList()
+    def __len__(self):
+        return self.size
+    def push(self, value):
+        self.size += 1
+        self.stack.add_to_head(value)
+    def pop(self):
+        self.size -= 1
+        return self.stack.remove_from_head()
